@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+
+<html onBeforeUnload="savePos();">
+<head>
+	<meta charset="utf-8">
+	<!--Bootstrap-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<!--End Bootstrap-->
+	<title>Books Reader</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="xhr.js"></script>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="s_jquery.js"></script>
+</head>
+
+<body>
+	<div id="divSave"></div>
+<!-- iframe для иллюзии,позволяет ajax нажать кнопку без перезагрузки -->
+	<div class="container" id="divMain"></div>
+	<iframe name="myIFR" style="display: none"></iframe>
+	<form target="myIFR">
+		<div>
+			<button type="button" class="btn btn-primary btn-lg btn-block" onclick="writeText();" > 
+			Далее
+			</button>
+		</div>	
+		<br>
+		<div>		
+			<button type="button" class="btn btn-primary btn-lg btn-block" onclick="pageDown();" > 
+			Назад
+			</button>
+		</div>			
+	</form>	
+	<br>
+	<br>
+	<button type="button" class="btn btn-info btn-lg btn-block" id="btn_menu"> 
+		Меню
+	</button>
+	
+	<div id="menu">
+		<ul>
+			<li>
+				<br>
+				
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-6">
+						<input type="text" class="form-control" id="numStr" size="5" id="in_menu">
+						</div>
+						
+						<div class="col-xs-6">
+						<button type="button" class="btn btn-info btn-lg btn-block" id="in_menu" onclick="writeTextFromStr(numStr.value);"> 
+							Перейти
+						</button>
+						</div>
+					</div>
+				</div>
+				
+				<br>
+			</li>
+			<!-- <li>
+				<button type="button" class="btn btn-primary btn-lg btn-block" id="in_menu" onclick="pageDown();" > 
+					2
+				</button>
+			</li> -->
+		</ul>
+	
+	
+		
+		
+		<div id="divProgress">
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		
+	</script>
+</body>
+
+<!--
+
+ -->
